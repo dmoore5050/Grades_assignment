@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script> 
+var studentGrade = [
+        ["Jane", 91],
+        ["Jack", 73],
+        ["John", 86],
+        ["Joey", 64],
+        ["Jim", 78],
+        ["Josie", 96],
+        ["James", 85],
+        ["Jess", 69],
+        ["Dustin", 100]
+    ];
+
+function averageGrade() {
+    for (var i = 0; i < studentGrade.length; i++) {
+        var totalGrade += studentGrade[i][1];
+    }
+    return totalGrade / studentGrades.length;
+}
+
+document.write("Average grade: " + averageGrade())
+
+function letterGrade() {
+
+    if (averageGrade() >= 90) {
+        document.write("Number grade: A");
+    }
+    else if (averageGrade() >= 80 && averageGrade() < 90) {
+        document.write("Number grade: B");
+    }
+    else if (averageGrade() >= 70 && averageGrade() < 80) {
+        document.write("Number grade: C");
+    }
+    else if (averageGrade() >= 65 && averageGrade() <70) {
+        document.write("Number grade: D");
+    }
+    else {
+        document.write("Number grade: F");
+    }
+}
+
+	</script>
+</body>
+</html>
