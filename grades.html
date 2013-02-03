@@ -13,22 +13,22 @@ var studentGrade = [
         ["Josie", 96],
         ["James", 85],
         ["Jess", 69],
+        ["Jezebel", 62],
         ["Dustin", 100]
     ];
 
+   var totalGrade = 0;
+
 function averageGrade() {
     for (var i = 0; i < studentGrade.length; i++) {
-        var totalGrade += studentGrade[i][1];
+        totalGrade += studentGrade[i][1];
     }
-    var ave = 0;
-    ave = totalGrade / studentGrade.length;
-    return ave;
+    var average = totalGrade / studentGrade.length;
+    return average;
 
 }
 
-var average = averageGrade();
-
-document.write("Average grade: " + average + "<br>");
+document.write("Average grade: " + averageGrade() + "<br>");
 
 function letterGrade(numGrade) {
 
@@ -49,7 +49,7 @@ function letterGrade(numGrade) {
     }
 }
 
-letterGrade(average);
+letterGrade(averageGrade());
 
 	</script>
 </body>
