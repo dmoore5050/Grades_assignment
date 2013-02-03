@@ -4,7 +4,10 @@
 </head>
 <body>
 	<script> 
-var studentGrade = [
+
+function averageGrade() {
+
+    var studentGrade = [
         ["Jane", 91],
         ["Jack", 73],
         ["John", 86],
@@ -17,18 +20,16 @@ var studentGrade = [
         ["Dustin", 100]
     ];
 
-   var totalGrade = 0;
-
-function averageGrade() {
+    var totalGrade = 0;
     for (var i = 0; i < studentGrade.length; i++) {
         totalGrade += studentGrade[i][1];
     }
     var average = totalGrade / studentGrade.length;
     return average;
-
 }
 
 document.write("Average grade: " + averageGrade() + "<br>");
+
 
 function letterGrade(numGrade) {
 
