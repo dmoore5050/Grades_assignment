@@ -20,29 +20,36 @@ function averageGrade() {
     for (var i = 0; i < studentGrade.length; i++) {
         var totalGrade += studentGrade[i][1];
     }
-    return totalGrade / studentGrades.length;
+    var ave = 0;
+    ave = totalGrade / studentGrade.length;
+    return ave;
+
 }
 
-document.write("Average grade: " + averageGrade())
+var average = averageGrade();
 
-function letterGrade() {
+document.write("Average grade: " + average + "<br>");
 
-    if (averageGrade() >= 90) {
-        document.write("Number grade: A");
+function letterGrade(numGrade) {
+
+    if (numGrade < 65) {
+        document.write("Letter grade: F");
     }
-    else if (averageGrade() >= 80 && averageGrade() < 90) {
-        document.write("Number grade: B");
+    else if (numGrade < 72) {
+        document.write("Letter grade: D");
     }
-    else if (averageGrade() >= 70 && averageGrade() < 80) {
-        document.write("Number grade: C");
+    else if (numGrade < 80) {
+        document.write("Letter grade: C");
     }
-    else if (averageGrade() >= 65 && averageGrade() <70) {
-        document.write("Number grade: D");
+    else if (numGrade < 90) {
+        document.write("Letter grade: B");
     }
     else {
-        document.write("Number grade: F");
+        document.write("Letter grade: A");
     }
 }
+
+letterGrade(average);
 
 	</script>
 </body>
