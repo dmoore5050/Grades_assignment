@@ -5,52 +5,54 @@
 <body>
 	<script> 
 
-function averageGrade() {
+        var studentGrade = [
+                ["Jane", 91],
+                ["Jack", 73],
+                ["John", 86],
+                ["Joey", 64],
+                ["Jim", 78],
+                ["Josie", 96],
+                ["James", 85],
+                ["Jess", 69],
+                ["Jezebel", 62],
+                ["Dustin", 100]
+            ];
 
-    var studentGrade = [
-        ["Jane", 91],
-        ["Jack", 73],
-        ["John", 86],
-        ["Joey", 64],
-        ["Jim", 78],
-        ["Josie", 96],
-        ["James", 85],
-        ["Jess", 69],
-        ["Jezebel", 62],
-        ["Dustin", 100]
-    ];
+        function averageGrade(studentList) {
 
-    var totalGrade = 0;
-    for (var i = 0; i < studentGrade.length; i++) {
-        totalGrade += studentGrade[i][1];
-    }
-    var average = totalGrade / studentGrade.length;
-    return average;
-}
+            var totalGrade = 0;
+            for (var i = 0; i < studentList.length; i++) {
+                totalGrade += studentList[i][1];
+            }
+            return totalGrade / studentList.length;
+            
+        }
 
-document.write("Average grade: " + averageGrade() + "<br>");
+        document.write("Average grade: " + averageGrade(studentGrade) + "<br>");
 
 
-function letterGrade(numGrade) {
+        function letterGrade(numGrade) {
 
-    if (numGrade < 65) {
-        document.write("Letter grade: F");
-    }
-    else if (numGrade < 72) {
-        document.write("Letter grade: D");
-    }
-    else if (numGrade < 80) {
-        document.write("Letter grade: C");
-    }
-    else if (numGrade < 90) {
-        document.write("Letter grade: B");
-    }
-    else {
-        document.write("Letter grade: A");
-    }
-}
+            var msg = "Letter grade: ";
 
-letterGrade(averageGrade());
+            if (numGrade < 65) {
+                document.write(msg + "F");
+            }
+            else if (numGrade < 72) {
+                document.write(msg + "D");
+            }
+            else if (numGrade < 80) {
+                document.write(msg + "C");
+            }
+            else if (numGrade < 90) {
+                document.write(msg + "B");
+            }
+            else {
+                document.write(msg + "A");
+            }
+        }
+
+        letterGrade(averageGrade(studentGrade));
 
 	</script>
 </body>
